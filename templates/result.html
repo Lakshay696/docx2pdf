@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion Result</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversion Successful!</h1>
+        <h2>File Metadata</h2>
+        <ul>
+            {% for key, value in metadata.items() %}
+                <li><strong>{{ key }}:</strong> {{ value }}</li>
+            {% endfor %}
+        </ul>
+        <a href="/download/{{ pdf_filename }}" class="btn">Download Your PDF</a>
+        <a href="/" class="btn btn-secondary">Convert Another File</a>
+    </div>
+</body>
+</html>
